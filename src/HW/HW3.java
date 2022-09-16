@@ -1,4 +1,4 @@
-package HW1_2;
+package HW;
 
 public class HW3 {
 

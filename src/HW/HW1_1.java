@@ -1,4 +1,4 @@
-package HW1_2;
+package HW;
 
 public class HW1_1 {
     public static void main(String[] args){
