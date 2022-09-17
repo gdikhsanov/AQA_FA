@@ -140,34 +140,34 @@ public class HW4 {
                 + "Task "
                 + ++number);
 
-        int size = 40;
-        String[] c = new String[size];
-        String x = "x";
-        String brush = "xxxxxxxxxxx";
-        String width = "   ";
+        int size = 40;                      //размер квадратного поля
+        String[] c = new String[size];      //Пустой массив
+        String x = "x";                     //служебный символ
+        String brush = "*";                 //кисть - чем рисуем - любая строка, кроме "x". Хоть xxxxxxxxxx
+        String width = "   ";               // Количеством пробелов выбираем ширину круга
 
-        Arrays.fill(c, " ");
+        for (int i = size; i >= 0; i--) {   // i - это координата Y
 
-        for (int i = size; i >= 0; i--) {
+                                            //общая формула (x – a)2 + (y – b)2 = R2, где а и b - это координаты центра
 
-            int xCoordR = (int)
+            int xCoordR = (int)             // это формула координаты Х правой части
                 Math.round(Math.sqrt(Math.pow((size) / 2.0, 2) - Math.pow((i) - size / 2.0, 2)) + size/2.0 - 1);
-            int xCoordL = (int)(size/2.0 -
-                Math.round(Math.sqrt(Math.pow((size) / 2.0, 2) - Math.pow((i) - size / 2.0, 2))));
 
-        c[xCoordR] = x;
-        c[xCoordL] = x;
+            int xCoordL = (int)             // это формула координаты Х левой части
+                (size/2.0 - Math.round(Math.sqrt(Math.pow((size) / 2.0, 2) - Math.pow((i) - size / 2.0, 2))));
 
-             for (int j = 0; j < size; j++) {
-                if (Objects.equals(c[j], x)) {
+            c[xCoordR] = x;                 //присваиваем правый символ ячейке массива
+            c[xCoordL] = x;                 //присваиваем левый символ ячейке массива
 
-                    c[j] = brush;
-                    //c[j] = String.valueOf(xCoordR);
+             for (int j = 0; j < size; j++) {      // стираем лишние символы из массивов прошлых строк
+                if (Objects.equals(c[j], x)) {     // т.к. они накапливаются в массиве
+
+                    c[j] = brush;               // рисуем символ кисти в занятые ячейку
                 }
-                else c[j] = width;
+                else c[j] = width;              //в пустые рисуем пробелы
              }
 
-           System.out.println(Arrays.toString(c).replace(", ",""));
+           System.out.println(Arrays.toString(c).replace(", ","")); //печатаем строки, удаляя запятые.
          }
     }
 }
