@@ -1,6 +1,7 @@
 package HW;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class HW4 {
     public static void main(String[] args) {
@@ -139,30 +140,34 @@ public class HW4 {
                 + "Task "
                 + ++number);
 
-        String[] c = new String[50];
+        int size = 40;
+        String[] c = new String[size];
         String x = "x";
+        String brush = "xxxxxxxxxxx";
+        String width = "   ";
 
         Arrays.fill(c, " ");
 
-         for (int i = 0; i < c.length / 2 - 1; i++) {
+        for (int i = size; i >= 0; i--) {
 
-            c[(int)(c.length / 2 - 1)-i] = x;
-             c[(int)(c.length / 2)+i] = x;
+            int xCoordR = (int)
+                Math.round(Math.sqrt(Math.pow((size) / 2.0, 2) - Math.pow((i) - size / 2.0, 2)) + size/2.0 - 1);
+            int xCoordL = (int)(size/2.0 -
+                Math.round(Math.sqrt(Math.pow((size) / 2.0, 2) - Math.pow((i) - size / 2.0, 2))));
 
-            System.out.println(Arrays.toString(c).replace(", ",""));
+        c[xCoordR] = x;
+        c[xCoordL] = x;
 
+             for (int j = 0; j < size; j++) {
+                if (Objects.equals(c[j], x)) {
+
+                    c[j] = brush;
+                    //c[j] = String.valueOf(xCoordR);
+                }
+                else c[j] = width;
+             }
+
+           System.out.println(Arrays.toString(c).replace(", ",""));
          }
-        Arrays.fill(c, "x");
-         for (int i = 0; i < c.length / 2 - 1; i++) {
-
-            c[(int)(c.length - 1) - i] = " ";
-            c[i] = " ";
-
-            System.out.println(Arrays.toString(c).replace(", ",""));
-
-        }
-
-
-
     }
 }
