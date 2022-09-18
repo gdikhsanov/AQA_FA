@@ -169,5 +169,31 @@ public class HW4 {
 
            System.out.println(Arrays.toString(c).replace(", ","")); //печатаем строки, удаляя запятые.
          }
+
+        //      #8.1
+
+        System.out.println("\n############################## \n"
+                + "Task "
+                + ++number);
+
+        size = 40;                      //размер квадратного поля
+
+        String brush1 = "*";                 //кисть - чем рисуем - любая строка, кроме "x". Хоть xxxxxxxxxx
+        String spases = "   ";               // Количеством пробелов выбираем ширину круга
+
+        for (int i = size; i >= 0; i--) {   // i - это координата Y
+
+            //общая формула (x – a)2 + (y – b)2 = R2, где а и b - это координаты центра
+
+
+            int xx = (int)             // это формула координаты Х левой части
+                    (size/2.0 - Math.round(Math.sqrt(Math.pow((size) / 2.0, 2) - Math.pow((i) - size / 2.0, 2))));
+
+
+       System.out.println(spases.repeat(xx) + brush1 + spases.repeat(size-xx-xx) + brush1); //печатаем строки.
+        }
+
+
+
     }
 }
