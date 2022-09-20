@@ -134,16 +134,16 @@ public class HW4 {
 
         System.out.println(s);
 
-        //      #8
+        //      #8 через массив
 
         System.out.println("\n############################## \n"
                 + "Task "
                 + ++number);
 
-        int size = 40;                      //размер квадратного поля
+        int size = 20;                      //размер квадратного поля
         String[] c = new String[size];      //Пустой массив
         String x = "x";                     //служебный символ
-        String brush = "*";                 //кисть - чем рисуем - любая строка, кроме "x". Хоть xxxxxxxxxx
+        String brush = "****";                 //кисть - чем рисуем - любая строка, кроме "x". Хоть xxxxxxxxxx
         String width = "   ";               // Количеством пробелов выбираем ширину круга
 
         for (int i = size; i >= 0; i--) {   // i - это координата Y
@@ -170,30 +170,21 @@ public class HW4 {
            System.out.println(Arrays.toString(c).replace(", ","")); //печатаем строки, удаляя запятые.
          }
 
-        //      #8.1
+        //      #8.1 без массивов
 
-        System.out.println("\n############################## \n"
-                + "Task "
-                + ++number);
-
-        size = 40;                      //размер квадратного поля
+        //размер квадратного поля
 
         String brush1 = "*";                 //кисть - чем рисуем - любая строка, кроме "x". Хоть xxxxxxxxxx
         String spases = "   ";               // Количеством пробелов выбираем ширину круга
 
-        for (int i = size; i >= 0; i--) {   // i - это координата Y
+        for (int i = size; i >= 0; i--) {
 
             //общая формула (x – a)2 + (y – b)2 = R2, где а и b - это координаты центра
 
-
-            int xx = (int)             // это формула координаты Х левой части
+            int xx = (int)
                     (size/2.0 - Math.round(Math.sqrt(Math.pow((size) / 2.0, 2) - Math.pow((i) - size / 2.0, 2))));
 
-
-       System.out.println(spases.repeat(xx) + brush1 + spases.repeat(size-xx-xx) + brush1); //печатаем строки.
+            System.out.println(spases.repeat(xx) + brush1 + spases.repeat(size-xx-xx) + brush1); //печатаем строки.
         }
-
-
-
     }
 }
