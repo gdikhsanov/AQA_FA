@@ -134,7 +134,7 @@ public class HW3 {
 
         System.out.println(s);
 
-        //      #8 через массив
+        //      #8 (extra 1) через массив
 
         System.out.println("\n############################## \n"
                 + "Task "
@@ -186,5 +186,25 @@ public class HW3 {
 
             System.out.println(spases.repeat(xx) + brush1 + spases.repeat(size-xx-xx) + brush1); //печатаем строки.
         }
+
+    //#9 (extra 2)
+
+        System.out.println("\n############################## \n"
+                + "Task "
+                + ++number);
+
+        String song = "we are the champions my friends";
+
+        String[] songArr = song.split(" ");
+
+        //for (int i = 0; i < song.length; i++) {
+            Arrays.sort(songArr);
+        System.out.println(Arrays.toString(songArr).replace("[", "").replace(",", "").
+                replace("]", ""));
+        //}
+
+
+
+
     }
 }
