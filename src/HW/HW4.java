@@ -10,7 +10,7 @@ public class HW4 {
 
             for (int j = 0; j <= x; j++)
             {
-                System.out.print(j + " ");
+                System.out.print(j);
             }
 
             x--;
@@ -55,6 +55,7 @@ public class HW4 {
             for (int j = 0; j < 9 -i; j++){
                 System.out.print("  ");
             }
+
             for (int j = 0; j <= i; j++){
                 System.out.print(j + " ");
             }
