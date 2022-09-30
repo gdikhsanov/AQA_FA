@@ -1,5 +1,6 @@
 package HW;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Notepad {
@@ -49,6 +50,17 @@ public class Notepad {
             }
             System.out.println(" * ");
         }
+
+        //HW5 #8
+
+        Person me = new Person(1982);
+        Person Olga = new Person("Olya", 1982, "f");
+
+        me.setName("Gregory");
+        me.setSex("M");
+
+        System.out.println(me.getName() + "\t\t"
+                + me.getAge() + " yrs\tsex: " + me.getSex());
     }
 }
         
