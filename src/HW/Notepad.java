@@ -1,6 +1,7 @@
 package HW;
 
-import java.lang.reflect.Array;
+import HW.HW_5_6.Person;
+
 import java.util.Arrays;
 
 public class Notepad {
