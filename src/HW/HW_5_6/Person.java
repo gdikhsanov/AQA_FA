@@ -4,10 +4,9 @@ import java.time.Year;
 import java.util.Objects;
 
 public class Person {
-    private String name;
-    private int age;
-    private String sex;
-    private int yearOfBirth;
+     String name;
+     String sex;
+     int yearOfBirth;
 
     public Person(int yearOfBirth) {
         this.yearOfBirth = yearOfBirth;
@@ -20,14 +19,20 @@ public class Person {
     }
 
     public String getName() {
-        if (this.name != null) {
-            if (this.sex.equalsIgnoreCase("m")) {
 
-                return "Mr. " + this.name;
-            } else if (this.sex.equalsIgnoreCase("f")) {
-                return "Ms. " + this.name;
-            }
-            return "";
+//        return Objects.requireNonNullElse(this.name, ""); //замена проверки на ноль через if
+
+        if (this.name != null) {
+//            if (this.sex.equalsIgnoreCase("m")) {
+//
+//                return "Mr. " + this.name;
+//            }
+//            else if (this.sex.equalsIgnoreCase("f")) {
+//                return "Ms. " + this.name;
+//            }
+//            else
+                return name;
+
         }
         return "";
     }

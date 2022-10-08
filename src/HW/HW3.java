@@ -194,17 +194,14 @@ public class HW3 {
                 + ++number);
 
         String song = "we are the champions my friends";
+        System.out.println(song);
+        System.out.println();
 
         String[] songArr = song.split(" ");
 
-        //for (int i = 0; i < song.length; i++) {
-            Arrays.sort(songArr);
+        Arrays.sort(songArr);
+
         System.out.println(Arrays.toString(songArr).replace("[", "").replace(",", "").
                 replace("]", ""));
-        //}
-
-
-
-
     }
 }
