@@ -5,6 +5,10 @@ import HW.HW_5_6.EmployeeUtils;
 import HW.HW_5_6.Person;
 import HW.HW_5_6.SalaryUtils;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.List;
+
 public class HW_5_6_Main {
 
     static void taskNumber(String str) {
@@ -44,6 +48,21 @@ public class HW_5_6_Main {
         System.out.println(EmployeeUtils.getSalaryTotal(emp));
         System.out.println(EmployeeUtils.getSalaryMin(emp));
         System.out.println(EmployeeUtils.getSalaryMax(emp));
+
+        // Alise 6+ 11.10.22         Привет солнце
+        taskNumber("HW6 extra#3 Привет солнце");
+
+        String phrase = "Привет солнце";
+
+        char[] ch = phrase.toCharArray();
+        int summ = 0;
+
+
+        for (int i = 0; i < ch.length ; i++) {
+
+            summ += ch[i];
+        }
+        System.out.println(summ);
 
     }
 
