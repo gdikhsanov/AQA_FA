@@ -1,7 +1,9 @@
 package HW.HW_5_6;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Objects;
+import java.util.function.Function;
 
 public class Human {
 
@@ -10,47 +12,6 @@ public class Human {
     private String country;
     private int salary;
     private String education;
-
-    public String getName() {
-        return Objects.requireNonNullElse(this.name, "");
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getCountry() {
-        return Objects.requireNonNullElse(this.country, "");
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
-    public int getSalary() {
-        return salary;
-    }
-
-    public void setSalary(int salary) {
-        this.salary = salary;
-    }
-
-    public String getEducation() {
-        return Objects.requireNonNullElse(this.education, "");
-    }
-
-    public void setEducation(String education) {
-        this.education = education;
-    }
-
 
     public Human(String name, int age, String country, int salary, String education) {
         this.name = name;
@@ -66,8 +27,8 @@ public class Human {
     }
 
     public static void printHumanArr(Human[] humanArr) {
-        for (int i = 0; i < humanArr.length ; i++) {                    //for (Human human : humanArr) { //не уверен в сортировке\направлении
-                                                                        //printOneHuman(human);
+        for (int i = 0; i < humanArr.length; i++) {                    //for (Human human : humanArr) { //не уверен в сортировке\направлении
+            //printOneHuman(human);
             printOneHuman(humanArr[i]);
         }
     }
@@ -156,9 +117,6 @@ public class Human {
         System.out.println();
     }
 
-
-
-
     public static void sortHumansSalary(Human[] humanArr) {
 
         int[] intArr = new int[humanArr.length];
@@ -214,4 +172,54 @@ public class Human {
         printHumanArr(resultArr);
         System.out.println();
     }
+
+    public static <V extends Comparable<V>> void sort(Human[] humanArr, Function<Human, V> getValue) {
+        Arrays.stream(humanArr).sorted(Comparator.comparing(getValue)).forEachOrdered(Human::printOneHuman);
+        System.out.println();
+    }
+
+    public String getName() {
+        return Objects.requireNonNullElse(this.name, "");
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getAge() { //Для метода Сергея нужен референсный тип. Моему достаточно int
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getCountry() {
+        return Objects.requireNonNullElse(this.country, "");
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public Integer getSalary() { //Для метода Сергея нужен референсный тип. Моему достаточно int
+        return salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
+    public String getEducation() {
+        return Objects.requireNonNullElse(this.education, "");
+    }
+
+// Сортировка от Сергея. Передаём сеттер в качестве аргумента
+    //Нужен референсный тип для числовых полей. Моему достаточно int
+
+    public void setEducation(String education) {
+        this.education = education;
+    }
 }
+
+

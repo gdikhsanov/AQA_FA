@@ -16,9 +16,12 @@ public class Human_Main {
         Human newArr[] = new Human[]{q, w, e, r, t, y, u, i, o};
 
        Human.sortHumansName(newArr);
-       Human.sortHumansAge(newArr);
-       Human.sortHumansCountry(newArr);
-       Human.sortHumansSalary(newArr);
-       Human.sortHumansEducation(newArr);
-         }
+//       Human.sortHumansAge(newArr);
+//       Human.sortHumansCountry(newArr);
+//       Human.sortHumansSalary(newArr);
+//       Human.sortHumansEducation(newArr);
+
+        Human.sort(newArr, Human::getCountry);
+        Human.sort(newArr, Human::getAge);
+    }
 }
