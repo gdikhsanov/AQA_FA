@@ -1,5 +1,7 @@
 package HW.HW_5_6;
 
+import HW.HW7.t1t2t6.Manager;
+
 public class EmployeeUtils {
 
     //1_1
@@ -13,7 +15,6 @@ public class EmployeeUtils {
 
                 result = i;
                 break;
-
             }
         }
         return result;
@@ -47,10 +48,8 @@ public class EmployeeUtils {
                 break;
             }
         }
-        return result;
+        return result; // объект(типа Employee)
     }
-
-    // объект(типа Employee)
 
     //3
 
@@ -90,5 +89,61 @@ public class EmployeeUtils {
             salaryMax = Math.max(i.getSalary(), salaryMax);
         }
         return salaryMax;
+    }
+
+    //HW_7_6_1
+    public static int getEmployeeMinSubordinates(HW.HW7.t1t2t6.Manager[] managerArray) {
+
+        int subMin = managerArray[0].getNumberOfSubordinates();
+
+        for (int i = 0; i < managerArray.length; i++) {
+
+            if (managerArray[i].getNumberOfSubordinates() < subMin) {
+                subMin = managerArray[i].getNumberOfSubordinates();
+            }
+        }
+        return subMin;
+    }
+
+    //HW_7_6_2
+    public static int getEmployeeMaxSubordinates(HW.HW7.t1t2t6.Manager[] managerArray) {
+
+        int subMax = managerArray[0].getNumberOfSubordinates();
+
+        for (int i = 0; i < managerArray.length; i++) {
+
+            if (managerArray[i].getNumberOfSubordinates() > subMax) {
+                subMax = managerArray[i].getNumberOfSubordinates();
+            }
+        }
+        return subMax;
+    }
+
+    //HW_7_6_3
+    public static int getEmployeeMaxOverpay(HW.HW7.t1t2t6.Manager[] managerArray) {
+
+        int overMax = managerArray[0].getSalary() - managerArray[0].getBaseSalary();
+
+        for (int i = 1; i < managerArray.length; i++) {
+
+            if (managerArray[i].getSalary() - managerArray[i].getBaseSalary() > overMax) {
+                overMax = managerArray[i].getSalary() - managerArray[i].getBaseSalary();
+            }
+        }
+        return overMax;
+    }
+
+    //HW_7_6_4
+    public static int getEmployeeMinOverpay(HW.HW7.t1t2t6.Manager[] managerArray) {
+
+        int overMin = managerArray[0].getSalary() - managerArray[0].getBaseSalary();
+
+        for (int i = 1; i < managerArray.length; i++) {
+
+            if (managerArray[i].getSalary() - managerArray[i].getBaseSalary() < overMin) {
+                overMin = managerArray[i].getSalary() - managerArray[i].getBaseSalary();
+            }
+        }
+        return overMin;
     }
 }

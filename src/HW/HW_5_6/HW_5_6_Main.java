@@ -1,13 +1,4 @@
-package HW;
-
-import HW.HW_5_6.Employee;
-import HW.HW_5_6.EmployeeUtils;
-import HW.HW_5_6.Person;
-import HW.HW_5_6.SalaryUtils;
-
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.List;
+package HW.HW_5_6;
 
 public class HW_5_6_Main {
 
@@ -43,7 +34,7 @@ public class HW_5_6_Main {
 
         taskNumber("HW6 #5");
 
-        System.out.println(EmployeeUtils.getEmployeeByName(emp, "Irina"));
+        System.out.println(EmployeeUtils.getEmployeeByName(emp, "Irina")); // toString overrided at Employee
         System.out.println(EmployeeUtils.getEmployeeByPeaceOfName(emp, "ri")); // toString overrided at Employee
         System.out.println(EmployeeUtils.getSalaryTotal(emp));
         System.out.println(EmployeeUtils.getSalaryMin(emp));
