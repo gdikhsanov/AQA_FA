@@ -1,4 +1,4 @@
-package HW.HW7.t3t4t5;
+package HW.HW7.t1t2t6;
 
 public class Month {
 

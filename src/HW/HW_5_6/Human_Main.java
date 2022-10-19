@@ -3,7 +3,7 @@ package HW.HW_5_6;
 public class Human_Main {
     public static void main(String[] args) {
 
-        Human newArr[] = {
+        Human[] newArr = {
                 new Human("Alice", 33, "Canada", 5000, "Bachelor"),
                 new Human("Boris", 22, "Japan", 12000, "PhD"),
                 new Human("Boris", 34, "Hungary", 3500, "High school"),
@@ -15,12 +15,14 @@ public class Human_Main {
                 new Human("Boris", 32, "USA", 5000, "Bachelor")};
 
         Human.sortHumansName(newArr);
-//       Human.sortHumansAge(newArr);
-//       Human.sortHumansCountry(newArr);
-//       Human.sortHumansSalary(newArr);
-//       Human.sortHumansEducation(newArr);
+        Human.sortHumansAge(newArr);
+        Human.sortHumansCountry(newArr);
+        Human.sortHumansSalary(newArr);
+        Human.sortHumansEducation(newArr);
 
-        Human.sort(newArr, Human::getCountry);
-        Human.sort(newArr, Human::getAge);
+
+//              Методs Сергея (т.к. он универсальный то нужен референсный тип. Моему достаточно int)
+//        Human.sort(newArr, Human::getCountry);
+//        Human.sort(newArr, Human::getAge);
     }
 }

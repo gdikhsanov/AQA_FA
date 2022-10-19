@@ -2,15 +2,36 @@ package HW.HW7.t1t2t6;
 
 public class Employee {
 
-    public Employee(int baseSalary, String name, int salary) {
-        this.baseSalary = baseSalary;
+    private String name;
+    private int age;
+    private String sex;
+    private int baseSalary;
+    private int salary;
+    private int salaryPerDay;
+
+    public Employee(String name, int age, String sex, int baseSalary) {
         this.name = name;
-        this.salary = salary;
+        this.age = age;
+        this.sex = sex;
+        this.baseSalary = baseSalary;
     }
 
-    private int baseSalary;
-    private String name;
-    private int salary;
+    public Employee(String name, int age, String sex, int baseSalary, int salaryPerDay) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.baseSalary = baseSalary;
+        this.salaryPerDay = salaryPerDay;
+    }
+
+    public Employee(String name, int age, String sex, int baseSalary, int salary, int salaryPerDay) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.baseSalary = baseSalary;
+        this.salary = salary;
+        this.salaryPerDay = salaryPerDay;
+    }
 
     public int getBaseSalary() {
         return baseSalary;
@@ -28,8 +49,36 @@ public class Employee {
         this.name = name;
     }
 
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public int getSalaryPerDay() {
+        return salaryPerDay;
+    }
+
+    public void setSalaryPerDay(int salaryPerDay) {
+        this.salaryPerDay = salaryPerDay;
+    }
+
     public int getSalary() {
         return salary;
     }
+
+
+
+
 
 }

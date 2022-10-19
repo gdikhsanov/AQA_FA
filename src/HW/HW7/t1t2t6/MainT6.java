@@ -3,7 +3,6 @@ package HW.HW7.t1t2t6;
 import HW.HW_5_6.EmployeeUtils;
 
 
-
 public class MainT6 {
 
     static void taskNumber(String str) {
@@ -12,14 +11,15 @@ public class MainT6 {
 
     public static void main(String[] args) {
 
+
         taskNumber("Task 6_1");
 
         Manager[] m1 = new Manager[]{
-                new Manager(5000, "Bob", 0, 4),
-                new Manager(6000, "Roy", 0, 5),
-                new Manager(9000, "Jack", 0, 10),
-                new Manager(5000, "Many", 0, 3),
-                new Manager(12000, "Patrik", 0, 15),
+                new Manager("Bob", 30, "M", 5000, 200, 4),
+                new Manager("Roy", 30, "M", 6000, 250, 5),
+                new Manager("Jack", 30, "M", 9000, 300, 10),
+                new Manager("Many", 30, "M", 5000, 150, 3),
+                new Manager("Patrik", 30, "M", 12000, 500, 15),
         };
 
         System.out.println(EmployeeUtils.getEmployeeMinSubordinates(m1));
@@ -36,6 +36,11 @@ public class MainT6 {
 
         System.out.println(EmployeeUtils.getEmployeeMinOverpay(m1));
 
+        taskNumber("Task 5");
+
+        Director d1 = new Director("Roy", 30, "M", 6000, 250, 5);
+
+        System.out.println(d1.getSalary(MonthUtils.quater1));
 
     }
 }
