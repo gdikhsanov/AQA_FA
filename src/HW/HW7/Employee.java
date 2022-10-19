@@ -1,4 +1,4 @@
-package HW.HW7.t1t2t6;
+package HW.HW7;
 
 public class Employee {
 

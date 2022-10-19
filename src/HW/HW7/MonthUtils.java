@@ -1,4 +1,4 @@
-package HW.HW7.t1t2t6;
+package HW.HW7;
 
 public class MonthUtils {
 
@@ -17,10 +17,10 @@ public class MonthUtils {
 
     public static final Month[] YEAR = {JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC};
 
-    public static final Month[] quater1 = {JAN, FEB, MAR};
-    public static final Month[] quater2 = {APR, MAY, JUN};
-    public static final Month[] quater3 = {JUL, AUG, SEP};
-    public static final Month[] quater4 = {OCT, NOV, DEC};
+    public static final Month[] quarter1 = {JAN, FEB, MAR};
+    public static final Month[] quarter2 = {APR, MAY, JUN};
+    public static final Month[] quarter3 = {JUL, AUG, SEP};
+    public static final Month[] quarter4 = {OCT, NOV, DEC};
 
     public static boolean monthValidation(Month month) {
         for (Month yearMonth : YEAR) {

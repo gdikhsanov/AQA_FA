@@ -1,9 +1,9 @@
-package HW.HW7.t1t2t6;
+package HW.HW7;
 
 import HW.HW_5_6.EmployeeUtils;
 
 
-public class MainT6 {
+public class MainHW7_Tasks5_6 {
 
     static void taskNumber(String str) {
         System.out.println("\n------------------------\n" + str + "\n------------------------");
@@ -38,9 +38,13 @@ public class MainT6 {
 
         taskNumber("Task 5");
 
-        Director d1 = new Director("Roy", 30, "M", 6000, 250, 5);
+        Director d1 = new Director("John", 30, "M", 6000, 250, 5);
 
-        System.out.println(d1.getSalary(MonthUtils.quater1));
+        System.out.println("Salary director John for first quarter is: "
+                + d1.getSalary(MonthUtils.quarter1));
+
+        System.out.println("Salary manager Roy for april and december is: "
+                + m1[1].getSalary(new Month[]{MonthUtils.APR, MonthUtils.DEC}));
 
     }
 }

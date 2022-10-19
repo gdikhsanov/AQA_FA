@@ -22,7 +22,7 @@ public class Human_Main {
 
 
 //              Методs Сергея (т.к. он универсальный то нужен референсный тип. Моему достаточно int)
-//        Human.sort(newArr, Human::getCountry);
-//        Human.sort(newArr, Human::getAge);
+        Human.sort(newArr, Human::getCountry);
+        Human.sort(newArr, Human::getAge);
     }
 }

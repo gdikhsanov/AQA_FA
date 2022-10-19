@@ -27,7 +27,7 @@ public class Human {
     }
 
     public static void printHumanArr(Human[] humanArr) {
-        for (int i = 0; i < humanArr.length; i++) {                    //for (Human human : humanArr) { //не уверен в сортировке\направлении
+        for (int i = 0; i < humanArr.length; i++) {      //Можно for (Human human : humanArr) { //не уверен в сортировке\направлении потому for(i)
             //printOneHuman(human);
             printOneHuman(humanArr[i]);
         }
@@ -173,6 +173,9 @@ public class Human {
         System.out.println();
     }
 
+    // Универсальная сортировка от Сергея. Передаём сеттер в качестве аргумента
+    //Нужен референсный тип для числовых полей. Моему достаточно int
+
     public static <V extends Comparable<V>> void sort(Human[] humanArr, Function<Human, V> getValue) {
         Arrays.stream(humanArr).sorted(Comparator.comparing(getValue)).forEachOrdered(Human::printOneHuman);
         System.out.println();
@@ -213,9 +216,6 @@ public class Human {
     public String getEducation() {
         return Objects.requireNonNullElse(this.education, "");
     }
-
-// Сортировка от Сергея. Передаём сеттер в качестве аргумента
-    //Нужен референсный тип для числовых полей. Моему достаточно int
 
     public void setEducation(String education) {
         this.education = education;
