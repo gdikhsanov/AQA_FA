@@ -77,7 +77,17 @@ public class Employee {
         return salary;
     }
 
+    public int getSalary(Month[] monthArray) {
+        int salaryTotal = 0;
 
+        for (int i = 0; i < monthArray.length; i++) {
+
+            if (MonthUtils.monthValidation(monthArray[i])) { // true?
+                salaryTotal += monthArray[i].getWorkingDays() * this.getSalaryPerDay(); // умножаем на рабочие дни
+            } else return 0;
+        }
+        return salaryTotal;
+    }
 
 
 

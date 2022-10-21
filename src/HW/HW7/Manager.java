@@ -23,6 +23,7 @@ public class Manager extends Employee {
         return (super.getBaseSalary() * (100 + getNumberOfSubordinates() * 3)) / 100; // исправил на 3%
     }
 
+    @Override
     public int getSalary(Month[] monthArray) {
         int salaryTotal = 0;
 
