@@ -1,6 +1,6 @@
 package HW.HW7;
 
-public class Manager extends Employee {
+public class Manager extends BaseEmployee implements IEmployee, IManager{
 
     private static final int ADD = 3;
 
