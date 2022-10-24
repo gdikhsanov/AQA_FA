@@ -1,10 +1,10 @@
 package HW.HW7;
 
-public class Month {
+public final class Month {
 
-    private String name;
-    private int days;
-    private int workingDays;
+    private final String name;
+    private final int days;
+    private final int workingDays;
 
     public Month(String name, int days, int workingDays) {
         this.name = name;
@@ -16,23 +16,11 @@ public class Month {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getDays() {
         return days;
     }
 
-    public void setDays(int days) {
-        this.days = days;
-    }
-
     public int getWorkingDays() {
         return workingDays;
-    }
-
-    public void setWorkingDays(int workingDays) {
-        this.workingDays = workingDays;
     }
 }

@@ -2,6 +2,8 @@ package HW.HW7;
 
 public class Manager extends Employee {
 
+    private static final int ADD = 3;
+
     private int numberOfSubordinates;
 
     public Manager(String name, int age, String sex, int baseSalary, int salaryPerDay, int numberOfSubordinates) {
@@ -20,7 +22,7 @@ public class Manager extends Employee {
     @Override
     public int getSalary() {
 
-        return (super.getBaseSalary() * (100 + getNumberOfSubordinates() * 3)) / 100; // исправил на 3%
+        return (super.getBaseSalary() * (100 + getNumberOfSubordinates() * Manager.ADD)) / 100; // исправил на 3%
     }
 
     @Override

@@ -17,10 +17,13 @@ public class MonthUtils {
 
     public static final Month[] YEAR = {JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC};
 
-    public static final Month[] quarter1 = {JAN, FEB, MAR};
-    public static final Month[] quarter2 = {APR, MAY, JUN};
-    public static final Month[] quarter3 = {JUL, AUG, SEP};
-    public static final Month[] quarter4 = {OCT, NOV, DEC};
+    public static final Month[] HALF1 = {JAN, FEB, MAR, APR, MAY, JUN};
+    public static final Month[] HALF2 = {JUL, AUG, SEP, OCT, NOV, DEC};
+
+    public static final Month[] QUARTER1 = {JAN, FEB, MAR};
+    public static final Month[] QUARTER2 = {APR, MAY, JUN};
+    public static final Month[] QUARTER3 = {JUL, AUG, SEP};
+    public static final Month[] QUARTER4 = {OCT, NOV, DEC};
 
     public static boolean monthValidation(Month month) {
         for (Month yearMonth : YEAR) {

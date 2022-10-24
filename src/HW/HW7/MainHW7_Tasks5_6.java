@@ -41,7 +41,7 @@ public class MainHW7_Tasks5_6 {
         Director d1 = new Director("John", 30, "M", 6000, 250, 5);
 
         System.out.println("Salary director John for first quarter is: "
-                + d1.getSalary(MonthUtils.quarter1));
+                + d1.getSalary(MonthUtils.QUARTER1));
 
         System.out.println("Salary manager Roy for april and december is: "
                 + m1[1].getSalary(new Month[]{MonthUtils.APR, MonthUtils.DEC}));
