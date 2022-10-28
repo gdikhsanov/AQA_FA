@@ -37,58 +37,47 @@ public abstract class BaseEmployee implements IEmployee {
     }
 
     @Override
-    public int getSalary() {
-        return salary;
-    }
+    public abstract int getSalary();
 
-    public void setSalary(int salary) {
-        this.salary = salary;
-    }
-
+    //    public void setSalary(int salary) {
+//        this.salary = salary;
+//    }
     @Override
-
     public int getBaseSalary() {
         return baseSalary;
     }
 
     @Override
-
     public void setBaseSalary(int baseSalary) {
         this.baseSalary = baseSalary;
     }
 
     @Override
-
     public String getName() {
         return name;
     }
 
     @Override
-
     public void setName(String name) {
         this.name = name;
     }
 
     @Override
-
     public int getAge() {
         return age;
     }
 
     @Override
-
     public void setAge(int age) {
         this.age = age;
     }
 
     @Override
-
     public String getSex() {
         return sex;
     }
 
     @Override
-
     public void setSex(String sex) {
         this.sex = sex;
     }
@@ -100,5 +89,4 @@ public abstract class BaseEmployee implements IEmployee {
     public void setSalaryPerDay(int salaryPerDay) {
         this.salaryPerDay = salaryPerDay;
     }
-
 }

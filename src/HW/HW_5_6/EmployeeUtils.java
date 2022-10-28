@@ -90,7 +90,7 @@ public class EmployeeUtils {
     }
 
     //HW_7_6_1
-    public static int getEmployeeMinSubordinates(HW.HW7.Manager[] managerArray) {
+    public static int getEmployeeMinSubordinates(HW.HW7.IManager[] managerArray) {
 
         int subMin = managerArray[0].getNumberOfSubordinates();
 
@@ -104,7 +104,7 @@ public class EmployeeUtils {
     }
 
     //HW_7_6_2
-    public static int getEmployeeMaxSubordinates(HW.HW7.Manager[] managerArray) {
+    public static int getEmployeeMaxSubordinates(HW.HW7.IManager[] managerArray) {
 
         int subMax = managerArray[0].getNumberOfSubordinates();
 
@@ -118,7 +118,7 @@ public class EmployeeUtils {
     }
 
     //HW_7_6_3
-    public static int getEmployeeMaxOverpay(HW.HW7.Manager[] managerArray) {
+    public static int getEmployeeMaxOverpay(HW.HW7.IManager[] managerArray) {
 
         int overMax = managerArray[0].getSalary() - managerArray[0].getBaseSalary();
 
@@ -132,7 +132,7 @@ public class EmployeeUtils {
     }
 
     //HW_7_6_4
-    public static int getEmployeeMinOverpay(HW.HW7.Manager[] managerArray) {
+    public static int getEmployeeMinOverpay(HW.HW7.IManager[] managerArray) {
 
         int overMin = managerArray[0].getSalary() - managerArray[0].getBaseSalary();
 

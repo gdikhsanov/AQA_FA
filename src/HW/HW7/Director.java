@@ -1,8 +1,10 @@
 package HW.HW7;
 
-public final class Director extends Manager {
+import java.awt.font.TextHitInfo;
 
-    private static final int ADD = 9;
+public final class Director extends Manager implements IManager {
+
+    private static final int BONUS_COEFFICIENT = 9;
 
 
     public Director(String name, int age, String sex, int baseSalary, int salaryPerDay, int numberOfSubordinates) {
@@ -11,6 +13,11 @@ public final class Director extends Manager {
 
     @Override
     public int getSalary() {
-        return (super.getBaseSalary() * (100 + getNumberOfSubordinates() * Director.ADD)) / 100;
+        return (super.getBaseSalary() * (100 + getNumberOfSubordinates() * getBonusCoefficient())) / 100;
     }
+    public int getBonusCoefficient() {
+        return BONUS_COEFFICIENT;
+    }
+
+
 }

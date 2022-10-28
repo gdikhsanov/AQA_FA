@@ -2,7 +2,7 @@ package HW.HW7;
 
 public class Manager extends BaseEmployee implements IEmployee, IManager{
 
-    private static final int ADD = 3;
+    private static final int BONUS_COEFFICIENT = 3;
 
     private int numberOfSubordinates;
 
@@ -22,7 +22,10 @@ public class Manager extends BaseEmployee implements IEmployee, IManager{
     @Override
     public int getSalary() {
 
-        return (super.getBaseSalary() * (100 + getNumberOfSubordinates() * Manager.ADD)) / 100; // исправил на 3%
+        return (super.getBaseSalary() * (100 + getNumberOfSubordinates() * getBonusCoefficient())) / 100; // исправил на 3%
+    }
+    public int getBonusCoefficient() {
+        return BONUS_COEFFICIENT;
     }
 
     @Override

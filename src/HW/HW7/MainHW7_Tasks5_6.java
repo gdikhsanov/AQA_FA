@@ -14,7 +14,7 @@ public class MainHW7_Tasks5_6 {
 
         taskNumber("Task 6_1");
 
-        Manager[] m1 = new Manager[]{
+        IManager[] m1 = {
                 new Manager("Bob", 30, "M", 5000, 200, 4),
                 new Manager("Roy", 30, "M", 6000, 250, 5),
                 new Manager("Jack", 30, "M", 9000, 300, 10),
@@ -38,12 +38,12 @@ public class MainHW7_Tasks5_6 {
 
         taskNumber("Task 5");
 
-        Director d1 = new Director("John", 30, "M", 6000, 250, 5);
+        IManager d1 = new Director("John", 30, "M", 6000, 250, 5);
 
         System.out.println("Salary director John for first quarter is: "
                 + d1.getSalary(MonthUtils.QUARTER1));
 
-        System.out.println("Salary manager Roy for april and december is: "
+        System.out.println("Salary manager Roy for " + MonthUtils.APR.getName() + " and " + MonthUtils.DEC.getName() + " is: "
                 + m1[1].getSalary(new Month[]{MonthUtils.APR, MonthUtils.DEC}));
 
     }
