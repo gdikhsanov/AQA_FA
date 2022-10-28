@@ -12,7 +12,7 @@ public final class Worker extends BaseEmployee implements IEmployee{
     }
 
     @Override
-    public final int getBaseSalary() { //8.1.2 финальность метода излишняяб т.к. класс final HW8.2.5
+    public final int getBaseSalary() { //8.1.2 финальность метода излишняя т.к. класс final HW8.2.5
         return super.getBaseSalary();
     }
 

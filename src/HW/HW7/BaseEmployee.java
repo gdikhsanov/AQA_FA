@@ -3,7 +3,7 @@
 
 package HW.HW7;
 
-public abstract class BaseEmployee {
+public abstract class BaseEmployee implements IEmployee {
 
     private String name;
     private int age;
@@ -36,33 +36,58 @@ public abstract class BaseEmployee {
         this.salaryPerDay = salaryPerDay;
     }
 
+    @Override
+    public int getSalary() {
+        return salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
+    @Override
+
     public int getBaseSalary() {
         return baseSalary;
     }
+
+    @Override
 
     public void setBaseSalary(int baseSalary) {
         this.baseSalary = baseSalary;
     }
 
+    @Override
+
     public String getName() {
         return name;
     }
+
+    @Override
 
     public void setName(String name) {
         this.name = name;
     }
 
+    @Override
+
     public int getAge() {
         return age;
     }
+
+    @Override
 
     public void setAge(int age) {
         this.age = age;
     }
 
+    @Override
+
     public String getSex() {
         return sex;
     }
+
+    @Override
 
     public void setSex(String sex) {
         this.sex = sex;
