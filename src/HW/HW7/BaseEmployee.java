@@ -1,6 +1,5 @@
 //    BaseEmployee  должен содержать общие поля и методы для Worker и Manager.
 
-
 package HW.HW7;
 
 public abstract class BaseEmployee implements IEmployee {

@@ -1,6 +1,9 @@
 package HW.HW7;
 
 public interface IManager {
+
+    public String getName();
+
     public int getNumberOfSubordinates(); //for Manager & Director
 
     public void setNumberOfSubordinates(int numberOfSubordinates);//for Manager & Director implementation in Main

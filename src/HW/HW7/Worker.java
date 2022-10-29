@@ -8,7 +8,7 @@ public final class Worker extends BaseEmployee implements IEmployee{
 
     @Override
     public int getSalary() {
-        return super.getBaseSalary();
+        return getBaseSalary();
     }
 
     @Override

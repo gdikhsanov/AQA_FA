@@ -1,8 +1,5 @@
 package HW.HW7;
 
-import HW.HW_5_6.EmployeeUtils;
-
-
 public class MainHW7_Tasks5_6 {
 
     static void taskNumber(String str) {

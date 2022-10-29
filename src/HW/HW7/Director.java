@@ -1,8 +1,6 @@
 package HW.HW7;
 
-import java.awt.font.TextHitInfo;
-
-public final class Director extends Manager implements IManager {
+public final class Director extends Manager implements IEmployee {
 
     private static final int BONUS_COEFFICIENT = 9;
 

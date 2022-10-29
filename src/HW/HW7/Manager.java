@@ -19,6 +19,11 @@ public class Manager extends BaseEmployee implements IEmployee, IManager{
         this.numberOfSubordinates = numberOfSubordinates;
     }
 
+//    @Override
+//    public String getName(){
+//       return super.getName();
+//    }
+
     @Override
     public int getSalary() {
 

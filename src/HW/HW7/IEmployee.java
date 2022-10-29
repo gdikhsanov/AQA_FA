@@ -2,7 +2,7 @@ package HW.HW7;
 
 public interface IEmployee {
 
-    public int getSalary();
+    public int getSalary(); // lkz babaseEmployee и для Worker
 
    public int getBaseSalary();
 
